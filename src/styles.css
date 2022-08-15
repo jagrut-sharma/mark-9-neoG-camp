@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 .App {
   font-family: "Montserrat", sans-serif;
   text-align: center;
@@ -29,6 +33,63 @@ body {
   cursor: pointer;
 }
 
+.btn:hover {
+  background-color: #1e40af;
+  color: white;
+}
+
 .container-primary {
   border-top: 1px solid black;
+}
+
+.container-primary .container-secondary {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container-primary .container-secondary .link {
+  text-decoration: none;
+  color: black;
+}
+
+.container-primary .container-secondary .container-tertiary {
+  border: 4px solid black;
+  border-radius: 12px;
+  max-width: 72vw;
+}
+
+.container-tertiary .poster {
+  width: 70vw;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom: 4px solid black;
+}
+
+.container-tertiary p {
+  margin: 0;
+  padding: 0.25rem;
+  word-wrap: break-word;
+}
+
+.container-tertiary p span {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 750px) {
+  .container-primary {
+    display: flex;
+    justify-content: center;
+  }
+  .container-primary .container-secondary {
+    margin-top: 2rem;
+  }
+
+  .container-primary .container-secondary .container-tertiary .poster {
+    width: 15vw;
+    height: 400px;
+  }
+  .container-primary .container-secondary .container-tertiary {
+    max-width: 16vw;
+  }
 }

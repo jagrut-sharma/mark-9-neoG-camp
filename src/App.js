@@ -31,7 +31,7 @@ const songsDB = {
   Romantic: [
     {
       song: "Te Amo",
-      singer: "Ash King & Sunidhi Chauhan",
+      singer: "Ash King",
       image:
         "https://uploads.codesandbox.io/uploads/user/f37537a7-d74e-4eed-91a0-6f8ae84d66b0/hK52-Dum+maaro+dum.jpg",
       link: "https://www.youtube.com/watch?v=9Ugw2b7HvVI"
@@ -46,7 +46,7 @@ const songsDB = {
     },
 
     {
-      song: "Ek ajnabee haseena se",
+      song: "Ek ajnabee haseena",
       singer: "Gaurav Dagaonkar",
       image:
         "https://uploads.codesandbox.io/uploads/user/f37537a7-d74e-4eed-91a0-6f8ae84d66b0/sfNv-jnabee.jpg",
@@ -116,7 +116,7 @@ const songsDB = {
     },
 
     {
-      song: "Tujhse Naraz Nahi Zindagi",
+      song: "Tujhse Naraz Nahi",
       singer: "Lata Mangeshkar",
       image:
         "https://uploads.codesandbox.io/uploads/user/f37537a7-d74e-4eed-91a0-6f8ae84d66b0/-zpL-masoom.jpg",
@@ -159,19 +159,25 @@ export default function App() {
 
       <section className="container-primary">
         {songsDB[mood].map((currentSong) => (
-          <a
-            className="link"
-            target="_blank"
-            href={currentSong.link}
-            rel="noreferrer"
-            key={currentSong.song}
-          >
-            <div className="container-secondary">
-              <img className="poster" src={currentSong.image} alt="" />
-              <p>{currentSong.song}</p>
-              <p>{currentSong.singer}</p>
-            </div>
-          </a>
+          <div className="container-secondary">
+            <a
+              className="link"
+              target="_blank"
+              href={currentSong.link}
+              rel="noreferrer"
+              key={currentSong.song}
+            >
+              <div className="container-tertiary">
+                <img className="poster" src={currentSong.image} alt="" />
+                <p>
+                  <span>Song Name:</span> {currentSong.song}
+                </p>
+                <p>
+                  <span>Singer:</span> {currentSong.singer}
+                </p>
+              </div>
+            </a>
+          </div>
         ))}
       </section>
     </div>
