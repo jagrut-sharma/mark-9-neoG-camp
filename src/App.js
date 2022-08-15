@@ -149,6 +149,7 @@ export default function App() {
       <p className="para">
         Here is some of the greatest music to listen to based on your mood:
       </p>
+      <p style={{ fontSize: "smaller" }}>Click on the songs to listen</p>
       <main>
         {songsMood.map((mood) => (
           <button className="btn" key={mood} onClick={() => clickHandler(mood)}>
